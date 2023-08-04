@@ -1,0 +1,19 @@
+<div>
+  <app-game-control
+    (intervalHappen)="onIntervalFired($event)"
+  ></app-game-control>
+  <!-- <app-odd -->
+    <!-- *ngIf="oddNumberList.length > 0"
+    [oddNumber]="oddNumberList[oddNumberList.length - 1]"
+  ></app-odd>
+  <app-even
+    *ngIf="EvenNumberList.length > 0"
+    [evenNumber]="EvenNumberList[EvenNumberList.length - 1]"
+  ></app-even> -->
+
+<div class="col-xs-12">
+      <app-odd *ngFor="let oddNumber of oddNumberList" [oddNumber]="oddNumber"></app-odd>
+      <app-even *ngFor="let evenNumber of EvenNumberList" [evenNumber]="evenNumber"></app-even>
+    </div>
+
+</div>
